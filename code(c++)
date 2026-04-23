@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
+// Function to check if text contains a specific word
+bool containsWord(std::string text, std::string word) {
+    return text.find(word) != std::string::npos; }
+int main() {
+    std::string sentence;
+    
+    std::cout << "Enter a sentence: ";
+    std::getline(std::cin, sentence);
+    
+    // Use the three functions
+    if (containsWord(sentence, "hello")) {
+        std::cout << "The sentence contains the word 'hello'" << std::endl;
+    } else {
+        std::cout << "The sentence does NOT contain the word 'hello'" << std::endl;
+    }
