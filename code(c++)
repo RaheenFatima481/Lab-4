@@ -6,6 +6,17 @@
 bool containsWord(std::string text, std::string word) {
     return text.find(word) != std::string::npos; }
 
+ function_2
+// Function to reverse a string
+std::string reverseString(std::string text) {
+    std::string reversed = "";
+    for (int i = text.length() - 1; i >= 0; i--) {
+        reversed += text[i];
+    }
+    return reversed;
+}
+
+=======
 // Function to count vowels in a string
 int countVowels(std::string text) {
     int count = 0;
@@ -17,6 +28,7 @@ int countVowels(std::string text) {
     }
     return count;
 }
+ function_3
 int main() {
     std::string sentence;
     
@@ -29,9 +41,15 @@ int main() {
     } else {
         std::cout << "The sentence does NOT contain the word 'hello'" << std::endl;
     }
+ function_2
+ std::string reversed = reverseString(sentence);
+    std::cout << "Reversed: \"" << reversed << "\"" << std::endl;
+
+=======
  int vowels = countVowels(sentence);
     std::cout << "Number of vowels: " << vowels << std::endl;
     
     return 0;
 }
+ function_3
 }
