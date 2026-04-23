@@ -6,18 +6,32 @@
 bool containsWord(std::string text, std::string word) {
     return text.find(word) != std::string::npos; }
 
-
+// Function to count vowels in a string
+int countVowels(std::string text) {
+    int count = 0;
+    for (char c : text) {
+        char lower = tolower(c);
+        if (lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u') {
+            count++;
+        }
+    }
+    return count;
+}
 int main() {
     std::string sentence;
     
     std::cout << "Enter a sentence: ";
     std::getline(std::cin, sentence);
-    
+
     // Use the three functions
     if (containsWord(sentence, "hello")) {
         std::cout << "The sentence contains the word 'hello'" << std::endl;
     } else {
         std::cout << "The sentence does NOT contain the word 'hello'" << std::endl;
     }
-
+ int vowels = countVowels(sentence);
+    std::cout << "Number of vowels: " << vowels << std::endl;
+    
+    return 0;
+}
 }
