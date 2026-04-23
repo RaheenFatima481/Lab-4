@@ -14,6 +14,19 @@ std::string reverseString(std::string text) {
     }
     return reversed;
 }
+
+// Function to count vowels in a string
+int countVowels(std::string text) {
+    int count = 0;
+    for (char c : text) {
+        char lower = tolower(c);
+        if (lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u') {
+            count++;
+        }
+    }
+    return count;
+}
+
 int main() {
     std::string sentence;
     
@@ -28,3 +41,9 @@ int main() {
     }
  std::string reversed = reverseString(sentence);
     std::cout << "Reversed: \"" << reversed << "\"" << std::endl;
+
+ int vowels = countVowels(sentence);
+    std::cout << "Number of vowels: " << vowels << std::endl;
+    
+    return 0;
+}
